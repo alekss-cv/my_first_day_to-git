@@ -1,0 +1,122 @@
+*{padding: 0;margin: 0;border: 0;}
+*,*:before,*:after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+nav,footer,header,aside{display: block;}
+html,body{height:100%;width:100%;font-size:100%;line-height:1;font-size:14px;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a,a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
+
+body{
+
+}
+h1 {
+  color: #561212;
+  font-size:30px;
+  font-family: cursive;
+
+}
+.game{
+  padding-left: 50px;
+  width: 800px;
+  height: 600px;
+/*  border-bottom: 1px solid black;*/
+  margin:  auto;
+
+}
+
+#rocket__game{
+  width: 50px;
+  height: 50px;
+  background-image: url(img/ROCKet2.png);
+  background-size:50px 50px;
+  position: relative;
+  top:150px;
+}
+
+#aliens__game{
+  width: 80px;
+  height: 80px;
+  background-image: url(img/aaa2.png);
+  background-size:80px 80px;
+  position: relative;
+  top:110px;
+  left:580px;
+  animation: aliensMov 1.5s infinite linear;
+}
+
+@keyframes aliensMov {
+  0%{
+    left:1000px;
+  }
+  100%{
+    left:-20px;
+  }
+}
+
+.jump{
+  animation: jump 0.3s  linear;
+}
+@keyframes jump {
+  0%{
+    top:150px;
+  }
+  30% {
+    top :130px;
+  }
+  50% {
+    top:80px;
+  }
+  80%{
+    top:130px;
+  }
+  100%{
+    left:145px;
+  }
+}
+
+.video__media{
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top:0;
+  left:0;
+}
+.video{
+  position: relative;
+  padding-bottom:56.25%;
+  z-index: 1;
+}
+
+.intro{
+  max-height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+.intro:after{
+  content:"";
+  content:block;
+  position: absolute;
+  top:0;
+  left:0;
+  z-index :2;
+  background-color: rgba(0,0,0,.2);
+  width: 100%;
+  height: 100%;
+}
+
+.video__game{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top:0;
+  left:0;
+  z-index: 3;
+}
